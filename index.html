@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>POSTERSBLR — Make Your Space Yours</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0d;
+    color: #f5f5f5;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,11,13,0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid #222228;
+}
+
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    opacity: .45;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 18px;
+}
+
+.hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: #8b5cf6;
+    filter: blur(120px);
+    opacity: .25;
+    top: 10%;
+    left: 5%;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #22d3ee;
+    filter: blur(120px);
+    opacity: .15;
+    bottom: 5%;
+    right: 5%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #33333b;
+    border-radius: 50px;
+    padding: 8px 14px;
+    font-size: 12px;
+    margin-bottom: 25px;
+    color: #c9c9d0;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(48px, 11vw, 100px);
+    line-height: .9;
+    letter-spacing: -5px;
+    margin-bottom: 28px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #fff, #a78bfa, #67e8f9);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: #a1a1aa;
+    font-size: 16px;
+    max-width: 500px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 22px;
+    border-radius: 50px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 22px;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 38px;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #85858e;
+    margin-bottom: 35px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.filter {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    border: 1px solid #292930;
+    background: #111115;
+    color: #aaa;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.filter.active {
+    background: white;
+    color: black;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.product {
+    background: #111115;
+    border: 1px solid #222229;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    border-color: #44444f;
+}
+
+.poster {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 30% 20%, #8b5cf6, transparent 35%),
+        radial-gradient(circle at 80% 80%, #06b6d4, transparent 35%),
+        #15151b;
+}
+
+.poster span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    color: #777780;
+    font-size: 12px;
+}
+
+.order {
+    display: block;
+    text-align: center;
+    margin-top: 13px;
+    padding: 11px;
+    background: #222229;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.about {
+    text-align: center;
+    max-width: 700px;
+}
+
+.about p {
+    color: #92929b;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+footer {
+    border-top: 1px solid #222228;
+    padding: 40px 22px;
+    text-align: center;
+    color: #66666f;
+    font-size: 13px;
+}
+
+@media (min-width: 700px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .poster {
+        height: 330px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">POSTERS<span>BLR.</span></div>
+
+        <div>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">✦ CURATED WALL ART</div>
+
+        <h1>
+            MAKE YOUR<br>
+            <span class="gradient">SPACE YOURS.</span>
+        </h1>
+
+        <p>
+            Travel. Fitness. Motivation.
+            Posters made to give your walls a little more personality.
+        </p>
+
+        <a href="#shop" class="button">
+            Explore Posters ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="shop">
+
+    <h2 class="section-title">The collection.</h2>
+
+    <p class="section-subtitle">
+        Find something that feels like you.
+    </p>
+
+    <div class="filters">
+
+        <button class="filter active" onclick="filterProducts('all', this)">
+            All
+        </button>
+
+        <button class="filter" onclick="filterProducts('travel', this)">
+            ✈ Travel
+        </button>
+
+        <button class="filter" onclick="filterProducts('gym', this)">
+            🏋 Gym
+        </button>
+
+        <button class="filter" onclick="filterProducts('motivation', this)">
+            ⚡ Motivation
+        </button>
+
+    </div>
+
+
+    <div class="products">
+
+        <div class="product" data-category="travel">
+            <div class="poster"><span>TRAVEL<br>MORE.</span></div>
+            <div class="product-info">
+                <h3>Travel Poster 01</h3>
+                <p>Travel Collection</p>
+                <a class="order" href="#" onclick="order('Travel Poster 01')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="travel">
+            <div class="poster"><span>GO<br>EXPLORE.</span></div>
+            <div class="product-info">
+                <h3>Travel Poster 02</h3>
+                <p>Travel Collection</p>
+                <a class="order" href="#" onclick="order('Travel Poster 02')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="travel">
+            <div class="poster"><span>WANDER<br>MORE.</span></div>
+            <div class="product-info">
+                <h3>Travel Poster 03</h3>
+                <p>Travel Collection</p>
+                <a class="order" href="#" onclick="order('Travel Poster 03')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="gym">
+            <div class="poster"><span>NO<br>EXCUSES.</span></div>
+            <div class="product-info">
+                <h3>Gym Poster 01</h3>
+                <p>Gym Collection</p>
+                <a class="order" href="#" onclick="order('Gym Poster 01')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="gym">
+            <div class="poster"><span>GET<br>STRONG.</span></div>
+            <div class="product-info">
+                <h3>Gym Poster 02</h3>
+                <p>Gym Collection</p>
+                <a class="order" href="#" onclick="order('Gym Poster 02')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="gym">
+            <div class="poster"><span>DISCIPLINE<br>≠ MOTIVATION</span></div>
+            <div class="product-info">
+                <h3>Gym Poster 03</h3>
+                <p>Gym Collection</p>
+                <a class="order" href="#" onclick="order('Gym Poster 03')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="motivation">
+            <div class="poster"><span>KEEP<br>GOING.</span></div>
+            <div class="product-info">
+                <h3>Motivation Poster 01</h3>
+                <p>Motivation Collection</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 01')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="motivation">
+            <div class="poster"><span>TRUST<br>THE PROCESS.</span></div>
+            <div class="product-info">
+                <h3>Motivation Poster 02</h3>
+                <p>Motivation Collection</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 02')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="motivation">
+            <div class="poster"><span>ONE DAY<br>OR DAY ONE?</span></div>
+            <div class="product-info">
+                <h3>Motivation Poster 03</h3>
+                <p>Motivation Collection</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 03')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="travel">
+            <div class="poster"><span>FIND<br>YOUR WAY.</span></div>
+            <div class="product-info">
+                <h3>Travel Poster 04</h3>
+                <p>Travel Collection</p>
+                <a class="order" href="#" onclick="order('Travel Poster 04')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="gym">
+            <div class="poster"><span>WORK<br>HARD.</span></div>
+            <div class="product-info">
+                <h3>Gym Poster 04</h3>
+                <p>Gym Collection</p>
+                <a class="order" href="#" onclick="order('Gym Poster 04')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="motivation">
+            <div class="poster"><span>START<br>NOW.</span></div>
+            <div class="product-info">
+                <h3>Motivation Poster 03</h3>
+                <p>Motivation Collection</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 03')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="travel">
+            <div class="poster"><span>LIVE<br>ADVENTURE.</span></div>
+            <div class="product-info">
+                <h3>Travel Poster 05</h3>
+                <p>Travel Collection</p>
+                <a class="order" href="#" onclick="order('Travel Poster 05')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="gym">
+            <div class="poster"><span>BUILD<br>YOURSELF.</span></div>
+            <div class="product-info">
+                <h3>Gym Poster 05</h3>
+                <p>Gym Collection</p>
+                <a class="order" href="#" onclick="order('Gym Poster 05')">Order Now</a>
+            </div>
+        </div>
+
+        <div class="product" data-category="motivation">
+            <div class="poster"><span>YOU<br>GOT THIS.</span></div>
+            <div class="product-info">
+                <h3>Motivation Poster 04</h3>
+                <p>Motivation Collection</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 04')">Order Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about" class="about">
+
+    <h2 class="section-title">More than a poster.</h2>
+
+    <p>
+        Your room is your space.
+        Your walls should say something about you.
+        We curate aesthetic travel, fitness and motivational
+        posters to help you create a space that feels like yours.
+    </p>
+
+</section>
+
+</main>
+
+
+<footer>
+    © 2026 POSTERSBLR · Made for your walls ✦
+</footer>
+
+
+<script>
+
+function filterProducts(category, button) {
+
+    document.querySelectorAll('.filter').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    document.querySelectorAll('.product').forEach(product => {
+
+        if (category === 'all' ||
+            product.dataset.category === category) {
+
+            product.style.display = 'block';
+
+        } else {
+
+            product.style.display = 'none';
+
+        }
+
+    });
+}
+
+
+function order(productName) {
+
+    const phone = "YOUR_WHATSAPP_NUMBER";
+
+    const message =
+        "Hi! I'm interested in " +
+        productName +
+        ". Is it available?";
+
+    window.open(
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+                                  </html>
