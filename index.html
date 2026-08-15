@@ -184,6 +184,7 @@ section {
     color: #aaa;
     border-radius: 50px;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .filter.active {
@@ -242,6 +243,18 @@ section {
 .product-info p {
     color: #777780;
     font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.size {
+    display: inline-block;
+    font-size: 11px;
+    color: #d4d4d8;
+    background: #1d1d23;
+    border: 1px solid #303039;
+    padding: 5px 8px;
+    border-radius: 7px;
+    margin-top: 3px;
 }
 
 .order {
@@ -315,6 +328,227 @@ footer {
         </h1>
 
         <p>
+            Travel. Fitness. Sports. Motivation.
+            Posters made to give your walls a little more personality.
+        </p>
+
+        <a href="#shop" class="button">
+            Explore Posters ↓
+        </a>
+
+    </div>
+
+</section>
+
+<section id="shop">
+
+    <h2 class="section-title">The collection.</h2>
+
+    <p class="section-subtitle">
+        Find something that feels like you.
+    </p>
+
+    <div class="filters">
+
+        <button class="filter active" onclick="filterProducts('all', this)">
+            All
+        </button>
+
+        <button class="filter" onclick="filterProducts('marvel', this)">
+            🦸 Marvel
+        </button>
+
+        <button class="filter" onclick="filterProducts('dc', this)">
+            ⚡ DC
+        </button>
+
+        <button class="filter" onclick="filterProducts('ronaldo', this)">
+            ⚽ Ronaldo
+        </button>
+
+        <button class="filter" onclick="filterProducts('messi', this)">
+            ⚽ Messi
+        </button>
+
+        <button class="filter" onclick="filterProducts('virat', this)">
+            🏏 Virat Kohli
+        </button>
+
+        <button class="filter" onclick="filterProducts('spiderman', this)">
+            🕷 Spiderman
+        </button>
+
+        <button class="filter" onclick="filterProducts('travel', this)">
+            ✈ Travel
+        </button>
+
+        <button class="filter" onclick="filterProducts('gym', this)">
+            🏋 Gym
+        </button>
+
+        <button class="filter" onclick="filterProducts('motivation', this)">
+            ⚡ Motivation
+        </button>
+
+    </div>
+
+    <div class="products">
+
+        <div class="product" data-category="marvel">
+            <div class="poster">
+                <span>MARVEL<br>HEROES.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Marvel Poster 01</h3>
+                <p>Marvel Collection</p>
+
+                <span class="size">
+                    Available size: A4
+                </span>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Marvel Poster 01', 'A4')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="dc">
+            <div class="poster">
+                <span>DC<br>LEGENDS.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>DC Poster 01</h3>
+                <p>DC Collection</p>
+
+                <span class="size">
+                    Available size: A3
+                </span>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('DC Poster 01', 'A3')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="ronaldo">
+            <div class="poster">
+                <span>RONALDO<br>7.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Ronaldo Poster 01</h3>
+                <p>Ronaldo Collection</p>
+
+                <span class="size">
+                    Available size: A5
+                </span>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Ronaldo Poster 01', 'A5')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="messi">
+            <div class="poster">
+                <span>MESSI<br>10.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Messi Poster 01</h3>
+                <p>Messi Collection</p>
+
+                <span class="size">
+                    Available size: A4
+                </span>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Messi Poster 01', 'A4')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="virat">
+            <div class="poster">
+                <span>VIRAT<br>KOHLI.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Virat Kohli Poster 01</h3>
+                <p>Virat Kohli Collection</p>
+
+                <span class="size">
+                    Available size: A3
+                </span>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Virat Kohli Poster 01', 'A3')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="spiderman">
+            <div class="poster">
+                <span>SPIDER<br>MAN.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Spiderman Poster 01</h3>
+                <p>Spiderman Collection</p>
+
+                <span class="size">
+                    Available size: A4
+                </span>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Spiderman Poster 01', 'A4')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+        </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">POSTERS<span>BLR.</span></div>
+
+        <div>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">✦ CURATED WALL ART</div>
+
+        <h1>
+            MAKE YOUR<br>
+            <span class="gradient">SPACE YOURS.</span>
+        </h1>
+
+        <p>
             Travel. Fitness. Motivation.
             Posters made to give your walls a little more personality.
         </p>
@@ -336,267 +570,420 @@ footer {
         Find something that feels like you.
     </p>
 
+    <!-- CATEGORY FILTERS -->
+    <div class="filter-title">Categories</div>
+
     <div class="filters">
 
-    <button class="filter active" onclick="filterProducts('all', this)">
-        All
-    </button>
+        <button class="filter active" onclick="filterProducts('all', this)">
+            All
+        </button>
 
-    <button class="filter" onclick="filterProducts('marvel', this)">
-        🦸 Marvel
-    </button>
+        <button class="filter" onclick="filterProducts('marvel', this)">
+            🦸 Marvel
+        </button>
 
-    <button class="filter" onclick="filterProducts('dc', this)">
-        ⚡ DC
-    </button>
+        <button class="filter" onclick="filterProducts('dc', this)">
+            ⚡ DC
+        </button>
 
-    <button class="filter" onclick="filterProducts('ronaldo', this)">
-        ⚽ Ronaldo
-    </button>
+        <button class="filter" onclick="filterProducts('ronaldo', this)">
+            ⚽ Ronaldo
+        </button>
 
-    <button class="filter" onclick="filterProducts('messi', this)">
-        ⚽ Messi
-    </button>
+        <button class="filter" onclick="filterProducts('messi', this)">
+            ⚽ Messi
+        </button>
 
-    <button class="filter" onclick="filterProducts('virat', this)">
-        🏏 Virat Kohli
-    </button>
+        <button class="filter" onclick="filterProducts('virat', this)">
+            🏏 Virat Kohli
+        </button>
 
-    <button class="filter" onclick="filterProducts('spiderman', this)">
-        🕷 Spiderman
-    </button>
+        <button class="filter" onclick="filterProducts('spiderman', this)">
+            🕷 Spiderman
+        </button>
 
-    <button class="filter" onclick="filterProducts('travel', this)">
-        ✈ Travel
-    </button>
+        <button class="filter" onclick="filterProducts('travel', this)">
+            ✈ Travel
+        </button>
 
-    <button class="filter" onclick="filterProducts('gym', this)">
-        🏋 Gym
-    </button>
+        <button class="filter" onclick="filterProducts('gym', this)">
+            🏋 Gym
+        </button>
 
-    <button class="filter" onclick="filterProducts('motivation', this)">
-        ⚡ Motivation
-    </button>
+        <button class="filter" onclick="filterProducts('motivation', this)">
+            ⚡ Motivation
+        </button>
 
-</div>
-    <h3 style="margin: 30px 0 15px; font-size: 18px;">
-    Choose Size
-</h3>
-
-<div class="filters">
-
-    <button class="filter" onclick="filterProducts('A3', this)">
-        A3
-    </button>
-
-    <button class="filter" onclick="filterProducts('A4', this)">
-        A4
-    </button>
-
-    <button class="filter" onclick="filterProducts('A5', this)">
-        A5
-    </button>
-
-    <button class="filter" onclick="filterProducts('A6', this)">
-        A6
-    </button>
-
-</div>
+    </div>
 
 
+    <!-- SIZE FILTERS -->
+    <div class="filter-title size-title">Sizes</div>
+
+    <div class="filters">
+
+        <button class="filter" onclick="filterProducts('A3', this)">
+            A3
+        </button>
+
+        <button class="filter" onclick="filterProducts('A4', this)">
+            A4
+        </button>
+
+        <button class="filter" onclick="filterProducts('A5', this)">
+            A5
+        </button>
+
+        <button class="filter" onclick="filterProducts('A6', this)">
+            A6
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
     <div class="products">
-        <!-- MARVEL -->
-<div class="product" data-category="marvel">
-    <div class="poster"><span>MARVEL<br>HEROES.</span></div>
-    <div class="product-info">
-        <h3>Marvel Poster 01</h3>
-        <p>Marvel Collection</p>
-        <a class="order" href="#" onclick="order('Marvel Poster 01')">Order Now</a>
-    </div>
-</div>
 
-<!-- DC -->
-<div class="product" data-category="dc">
-    <div class="poster"><span>DC<br>LEGENDS.</span></div>
-    <div class="product-info">
-        <h3>DC Poster 01</h3>
-        <p>DC Collection</p>
-        <a class="order" href="#" onclick="order('DC Poster 01')">Order Now</a>
-    </div>
-</div>
 
-<!-- RONALDO -->
-<div class="product" data-category="ronaldo">
-    <div class="poster"><span>RONALDO<br>7.</span></div>
-    <div class="product-info">
-        <h3>Ronaldo Poster 01</h3>
-        <p>Ronaldo Collection</p>
-        <a class="order" href="#" onclick="order('Ronaldo Poster 01')">Order Now</a>
-    </div>
-</div>
+        <!-- MARVEL - A4 -->
+        <div class="product" data-category="marvel" data-size="A4">
+            <div class="poster">
+                <span>MARVEL<br>HEROES.</span>
+            </div>
 
-<!-- MESSI -->
-<div class="product" data-category="messi">
-    <div class="poster"><span>MESSI<br>10.</span></div>
-    <div class="product-info">
-        <h3>Messi Poster 01</h3>
-        <p>Messi Collection</p>
-        <a class="order" href="#" onclick="order('Messi Poster 01')">Order Now</a>
-    </div>
-</div>
-
-<!-- VIRAT KOHLI -->
-<div class="product" data-category="virat">
-    <div class="poster"><span>VIRAT<br>KOHLI.</span></div>
-    <div class="product-info">
-        <h3>Virat Kohli Poster 01</h3>
-        <p>Virat Kohli Collection</p>
-        <a class="order" href="#" onclick="order('Virat Kohli Poster 01')">Order Now</a>
-    </div>
-</div>
-
-<!-- SPIDERMAN -->
-<div class="product" data-category="spiderman">
-    <div class="poster"><span>SPIDER<br>MAN.</span></div>
-    <div class="product-info">
-        <h3>Spiderman Poster 01</h3>
-        <p>Spiderman Collection</p>
-        <a class="order" href="#" onclick="order('Spiderman Poster 01')">Order Now</a>
-    </div>
-</div>
-
-        <div class="product" data-category="travel">
-            <div class="poster"><span>TRAVEL<br>MORE.</span></div>
             <div class="product-info">
-                <h3>Travel Poster 01</h3>
-                <p>Travel Collection</p>
-                <a class="order" href="#" onclick="order('Travel Poster 01')">Order Now</a>
+                <h3>Marvel Heroes</h3>
+                <p>Marvel • A4</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Marvel Heroes - A4')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="travel">
-            <div class="poster"><span>GO<br>EXPLORE.</span></div>
+
+        <!-- DC - A3 -->
+        <div class="product" data-category="dc" data-size="A3">
+            <div class="poster">
+                <span>DC<br>LEGENDS.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Travel Poster 02</h3>
-                <p>Travel Collection</p>
-                <a class="order" href="#" onclick="order('Travel Poster 02')">Order Now</a>
+                <h3>DC Legends</h3>
+                <p>DC • A3</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('DC Legends - A3')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="travel">
-            <div class="poster"><span>WANDER<br>MORE.</span></div>
+
+        <!-- RONALDO - A4 -->
+        <div class="product" data-category="ronaldo" data-size="A4">
+            <div class="poster">
+                <span>RONALDO<br>7.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Travel Poster 03</h3>
-                <p>Travel Collection</p>
-                <a class="order" href="#" onclick="order('Travel Poster 03')">Order Now</a>
+                <h3>Ronaldo 7</h3>
+                <p>Ronaldo • A4</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Ronaldo 7 - A4')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="gym">
-            <div class="poster"><span>NO<br>EXCUSES.</span></div>
+
+        <!-- MESSI - A5 -->
+        <div class="product" data-category="messi" data-size="A5">
+            <div class="poster">
+                <span>MESSI<br>10.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Gym Poster 01</h3>
-                <p>Gym Collection</p>
-                <a class="order" href="#" onclick="order('Gym Poster 01')">Order Now</a>
+                <h3>Messi 10</h3>
+                <p>Messi • A5</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Messi 10 - A5')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="gym">
-            <div class="poster"><span>GET<br>STRONG.</span></div>
+
+        <!-- VIRAT - A4 -->
+        <div class="product" data-category="virat" data-size="A4">
+            <div class="poster">
+                <span>VIRAT<br>KOHLI.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Gym Poster 02</h3>
-                <p>Gym Collection</p>
-                <a class="order" href="#" onclick="order('Gym Poster 02')">Order Now</a>
+                <h3>Virat Kohli</h3>
+                <p>Virat Kohli • A4</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Virat Kohli - A4')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="gym">
-            <div class="poster"><span>DISCIPLINE<br>≠ MOTIVATION</span></div>
+
+        <!-- SPIDERMAN - A3 -->
+        <div class="product" data-category="spiderman" data-size="A3">
+            <div class="poster">
+                <span>SPIDER<br>MAN.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Gym Poster 03</h3>
-                <p>Gym Collection</p>
-                <a class="order" href="#" onclick="order('Gym Poster 03')">Order Now</a>
+                <h3>Spiderman</h3>
+                <p>Spiderman • A3</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Spiderman - A3')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="motivation">
-            <div class="poster"><span>KEEP<br>GOING.</span></div>
+
+        <!-- TRAVEL - A5 -->
+        <div class="product" data-category="travel" data-size="A5">
+            <div class="poster">
+                <span>TRAVEL<br>MORE.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Motivation Poster 01</h3>
-                <p>Motivation Collection</p>
-                <a class="order" href="#" onclick="order('Motivation Poster 01')">Order Now</a>
+                <h3>Travel More</h3>
+                <p>Travel • A5</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Travel More - A5')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="motivation">
-            <div class="poster"><span>TRUST<br>THE PROCESS.</span></div>
+
+        <!-- TRAVEL - A4 -->
+        <div class="product" data-category="travel" data-size="A4">
+            <div class="poster">
+                <span>GO<br>EXPLORE.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Motivation Poster 02</h3>
-                <p>Motivation Collection</p>
-                <a class="order" href="#" onclick="order('Motivation Poster 02')">Order Now</a>
+                <h3>Go Explore</h3>
+                <p>Travel • A4</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Go Explore - A4')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="motivation">
-            <div class="poster"><span>ONE DAY<br>OR DAY ONE?</span></div>
+
+        <!-- TRAVEL - A3 -->
+        <div class="product" data-category="travel" data-size="A3">
+            <div class="poster">
+                <span>WANDER<br>MORE.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Motivation Poster 03</h3>
-                <p>Motivation Collection</p>
-                <a class="order" href="#" onclick="order('Motivation Poster 03')">Order Now</a>
+                <h3>Wander More</h3>
+                <p>Travel • A3</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Wander More - A3')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="travel">
-            <div class="poster"><span>FIND<br>YOUR WAY.</span></div>
+
+        <!-- GYM - A4 -->
+        <div class="product" data-category="gym" data-size="A4">
+            <div class="poster">
+                <span>NO<br>EXCUSES.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Travel Poster 04</h3>
-                <p>Travel Collection</p>
-                <a class="order" href="#" onclick="order('Travel Poster 04')">Order Now</a>
+                <h3>No Excuses</h3>
+                <p>Gym • A4</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('No Excuses - A4')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="gym">
-            <div class="poster"><span>WORK<br>HARD.</span></div>
+
+        <!-- GYM - A5 -->
+        <div class="product" data-category="gym" data-size="A5">
+            <div class="poster">
+                <span>GET<br>STRONG.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Gym Poster 04</h3>
-                <p>Gym Collection</p>
-                <a class="order" href="#" onclick="order('Gym Poster 04')">Order Now</a>
+                <h3>Get Strong</h3>
+                <p>Gym • A5</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Get Strong - A5')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="motivation">
-            <div class="poster"><span>START<br>NOW.</span></div>
+
+        <!-- GYM - A3 -->
+        <div class="product" data-category="gym" data-size="A3">
+            <div class="poster">
+                <span>DISCIPLINE<br>≠ MOTIVATION</span>
+            </div>
+
             <div class="product-info">
-                <h3>Motivation Poster 03</h3>
-                <p>Motivation Collection</p>
-                <a class="order" href="#" onclick="order('Motivation Poster 03')">Order Now</a>
+                <h3>Discipline</h3>
+                <p>Gym • A3</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Discipline - A3')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="travel">
-            <div class="poster"><span>LIVE<br>ADVENTURE.</span></div>
+
+        <!-- MOTIVATION - A4 -->
+        <div class="product" data-category="motivation" data-size="A4">
+            <div class="poster">
+                <span>KEEP<br>GOING.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Travel Poster 05</h3>
-                <p>Travel Collection</p>
-                <a class="order" href="#" onclick="order('Travel Poster 05')">Order Now</a>
+                <h3>Keep Going</h3>
+                <p>Motivation • A4</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Keep Going - A4')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="gym">
-            <div class="poster"><span>BUILD<br>YOURSELF.</span></div>
+
+        <!-- MOTIVATION - A5 -->
+        <div class="product" data-category="motivation" data-size="A5">
+            <div class="poster">
+                <span>TRUST<br>THE PROCESS.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Gym Poster 05</h3>
-                <p>Gym Collection</p>
-                <a class="order" href="#" onclick="order('Gym Poster 05')">Order Now</a>
+                <h3>Trust The Process</h3>
+                <p>Motivation • A5</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Trust The Process - A5')">
+                   Order Now
+                </a>
             </div>
         </div>
 
-        <div class="product" data-category="motivation">
-            <div class="poster"><span>YOU<br>GOT THIS.</span></div>
+
+        <!-- MOTIVATION - A6 -->
+        <div class="product" data-category="motivation" data-size="A6">
+            <div class="poster">
+                <span>START<br>NOW.</span>
+            </div>
+
             <div class="product-info">
-                <h3>Motivation Poster 04</h3>
-                <p>Motivation Collection</p>
-                <a class="order" href="#" onclick="order('Motivation Poster 04')">Order Now</a>
+                <h3>Start Now</h3>
+                <p>Motivation • A6</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Start Now - A6')">
+                   Order Now
+                </a>
+            </div>
+        </div>
+
+
+        <!-- TRAVEL - A6 -->
+        <div class="product" data-category="travel" data-size="A6">
+            <div class="poster">
+                <span>FIND<br>YOUR WAY.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Find Your Way</h3>
+                <p>Travel • A6</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Find Your Way - A6')">
+                   Order Now
+                </a>
+            </div>
+        </div>
+
+
+        <!-- GYM - A6 -->
+        <div class="product" data-category="gym" data-size="A6">
+            <div class="poster">
+                <span>WORK<br>HARD.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>Work Hard</h3>
+                <p>Gym • A6</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('Work Hard - A6')">
+                   Order Now
+                </a>
+            </div>
+        </div>
+
+
+        <!-- MOTIVATION - A3 -->
+        <div class="product" data-category="motivation" data-size="A3">
+            <div class="poster">
+                <span>YOU<br>GOT THIS.</span>
+            </div>
+
+            <div class="product-info">
+                <h3>You Got This</h3>
+                <p>Motivation • A3</p>
+
+                <a class="order"
+                   href="#"
+                   onclick="order('You Got This - A3')">
+                   Order Now
+                </a>
             </div>
         </div>
 
@@ -612,8 +999,9 @@ footer {
     <p>
         Your room is your space.
         Your walls should say something about you.
-        We curate aesthetic travel, fitness and motivational
-        posters to help you create a space that feels like yours.
+        We curate aesthetic travel, fitness,
+        sports and motivational posters
+        to help you create a space that feels like yours.
     </p>
 
 </section>
@@ -628,28 +1016,69 @@ footer {
 
 <script>
 
-function filterProducts(category, button) {
+let currentCategory = "all";
+let currentSize = "all";
 
-    document.querySelectorAll('.filter').forEach(btn => {
-        btn.classList.remove('active');
-    });
 
-    button.classList.add('active');
+function filterProducts(type, button) {
 
-    document.querySelectorAll('.product').forEach(product => {
+    /*
+     * Category buttons and size buttons work separately.
+     * This means a poster only appears when it actually
+     * belongs to the selected category AND has the selected size.
+     */
 
-        if (category === 'all' ||
-            product.dataset.category === category) {
+    const categoryButtons =
+        document.querySelectorAll(".category-filter");
 
-            product.style.display = 'block';
+    const sizeButtons =
+        document.querySelectorAll(".size-filter");
 
+
+    if (
+        ["marvel","dc","ronaldo","messi","virat",
+         "spiderman","travel","gym","motivation","all"]
+         .includes(type)
+    ) {
+
+        currentCategory = type;
+
+        document.querySelectorAll(".category-filter").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+    } else {
+
+        currentSize = type;
+
+        document.querySelectorAll(".size-filter").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+    }
+
+
+    document.querySelectorAll(".product").forEach(product => {
+
+        const categoryMatch =
+            currentCategory === "all" ||
+            product.dataset.category === currentCategory;
+
+        const sizeMatch =
+            currentSize === "all" ||
+            product.dataset.size === currentSize;
+
+        if (categoryMatch && sizeMatch) {
+            product.style.display = "block";
         } else {
-
-            product.style.display = 'none';
-
+            product.style.display = "none";
         }
 
     });
+
 }
 
 
@@ -675,4 +1104,5 @@ function order(productName) {
 </script>
 
 </body>
-                                  </html>
+    </html>
+       
