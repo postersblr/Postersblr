@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -143,11 +143,6 @@ header {
     color: black;
     text-decoration: none;
     font-weight: 700;
-    transition: .25s;
-}
-
-.button:hover {
-    transform: translateY(-3px);
 }
 
 section {
@@ -168,18 +163,17 @@ section {
     margin-bottom: 35px;
 }
 
-.filter-heading {
-    font-family: 'Space Grotesk', sans-serif;
+.filter-title {
+    margin: 30px 0 15px;
     font-size: 18px;
-    margin-bottom: 12px;
 }
 
 .filters {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    padding-bottom: 12px;
-    margin-bottom: 28px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .filter {
@@ -191,18 +185,11 @@ section {
     border-radius: 50px;
     cursor: pointer;
     font-family: inherit;
-    font-size: 14px;
-}
-
-.filter:hover {
-    border-color: #555560;
-    color: white;
 }
 
 .filter.active {
     background: white;
     color: black;
-    border-color: white;
 }
 
 .products {
@@ -329,7 +316,7 @@ footer {
         </h1>
 
         <p>
-            Sports. Heroes. Travel. Fitness.
+            Travel. Fitness. Motivation.
             Posters made to give your walls a little more personality.
         </p>
 
@@ -349,499 +336,360 @@ footer {
         Find something that feels like you.
     </p>
 
-    <div class="filter-heading">Categories</div>
+    <h3 class="filter-title">Browse by category</h3>
 
     <div class="filters">
 
-        <button class="filter active"
-                data-filter-type="category"
-                data-filter-value="all">
+        <button class="filter active" onclick="filterCategory('all', this)">
             All
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="marvel">
+        <button class="filter" onclick="filterCategory('marvel', this)">
             🦸 Marvel
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="dc">
+        <button class="filter" onclick="filterCategory('dc', this)">
             ⚡ DC
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="ronaldo">
+        <button class="filter" onclick="filterCategory('ronaldo', this)">
             ⚽ Ronaldo
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="messi">
+        <button class="filter" onclick="filterCategory('messi', this)">
             ⚽ Messi
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="virat">
+        <button class="filter" onclick="filterCategory('virat', this)">
             🏏 Virat Kohli
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="spiderman">
+        <button class="filter" onclick="filterCategory('spiderman', this)">
             🕷 Spiderman
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="travel">
+        <button class="filter" onclick="filterCategory('travel', this)">
             ✈ Travel
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="gym">
+        <button class="filter" onclick="filterCategory('gym', this)">
             🏋 Gym
         </button>
 
-        <button class="filter"
-                data-filter-type="category"
-                data-filter-value="motivation">
+        <button class="filter" onclick="filterCategory('motivation', this)">
             ⚡ Motivation
         </button>
 
     </div>
 
-    <div class="filter-heading">Sizes</div>
+    <h3 class="filter-title">Filter by size</h3>
 
     <div class="filters">
 
-        <button class="filter active"
-                data-filter-type="size"
-                data-filter-value="all">
+        <button class="filter active" onclick="filterSize('all', this)">
             All Sizes
         </button>
 
-        <button class="filter"
-                data-filter-type="size"
-                data-filter-value="A3">
+        <button class="filter" onclick="filterSize('A3', this)">
             A3
         </button>
 
-        <button class="filter"
-                data-filter-type="size"
-                data-filter-value="A4">
+        <button class="filter" onclick="filterSize('A4', this)">
             A4
         </button>
 
-        <button class="filter"
-                data-filter-type="size"
-                data-filter-value="A5">
+        <button class="filter" onclick="filterSize('A5', this)">
             A5
         </button>
 
-        <button class="filter"
-                data-filter-type="size"
-                data-filter-value="A6">
+        <button class="filter" onclick="filterSize('A6', this)">
             A6
         </button>
 
     </div>
 
     <div class="products">
-                <!-- MARVEL — A4 -->
-        <div class="product"
-             data-category="marvel"
-             data-size="A4">
 
+        <!-- YOUR PRODUCTS START HERE -->
+
+        <div class="product" data-category="marvel" data-size="A4">
             <div class="poster">
                 <span>MARVEL<br>HEROES.</span>
             </div>
-
             <div class="product-info">
-                <h3>Marvel Heroes</h3>
+                <h3>Marvel Poster 01</h3>
                 <p>Marvel • A4</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Marvel Heroes - A4')">
+                <a class="order" href="#" onclick="order('Marvel Poster 01 - A4')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- DC — A3 -->
-        <div class="product"
-             data-category="dc"
-             data-size="A3">
-
+        <div class="product" data-category="dc" data-size="A3">
             <div class="poster">
                 <span>DC<br>LEGENDS.</span>
             </div>
-
             <div class="product-info">
-                <h3>DC Legends</h3>
+                <h3>DC Poster 01</h3>
                 <p>DC • A3</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('DC Legends - A3')">
+                <a class="order" href="#" onclick="order('DC Poster 01 - A3')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- RONALDO — A4 -->
-        <div class="product"
-             data-category="ronaldo"
-             data-size="A4">
-
+        <div class="product" data-category="ronaldo" data-size="A5">
             <div class="poster">
                 <span>RONALDO<br>7.</span>
             </div>
-
             <div class="product-info">
-                <h3>Ronaldo 7</h3>
-                <p>Ronaldo • A4</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Ronaldo 7 - A4')">
+                <h3>Ronaldo Poster 01</h3>
+                <p>Ronaldo • A5</p>
+                <a class="order" href="#" onclick="order('Ronaldo Poster 01 - A5')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- MESSI — A5 -->
-        <div class="product"
-             data-category="messi"
-             data-size="A5">
-
+        <div class="product" data-category="messi" data-size="A4">
             <div class="poster">
                 <span>MESSI<br>10.</span>
             </div>
-
             <div class="product-info">
-                <h3>Messi 10</h3>
-                <p>Messi • A5</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Messi 10 - A5')">
+                <h3>Messi Poster 01</h3>
+                <p>Messi • A4</p>
+                <a class="order" href="#" onclick="order('Messi Poster 01 - A4')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- VIRAT KOHLI — A4 -->
-        <div class="product"
-             data-category="virat"
-             data-size="A4">
-
+        <div class="product" data-category="virat" data-size="A3">
             <div class="poster">
                 <span>VIRAT<br>KOHLI.</span>
             </div>
-
             <div class="product-info">
-                <h3>Virat Kohli</h3>
-                <p>Virat Kohli • A4</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Virat Kohli - A4')">
+                <h3>Virat Kohli Poster 01</h3>
+                <p>Virat Kohli • A3</p>
+                <a class="order" href="#" onclick="order('Virat Kohli Poster 01 - A3')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- SPIDERMAN — A3 -->
-        <div class="product"
-             data-category="spiderman"
-             data-size="A3">
-
+        <div class="product" data-category="spiderman" data-size="A5">
             <div class="poster">
                 <span>SPIDER<br>MAN.</span>
             </div>
-
             <div class="product-info">
-                <h3>Spiderman</h3>
-                <p>Spiderman • A3</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Spiderman - A3')">
+                <h3>Spiderman Poster 01</h3>
+                <p>Spiderman • A5</p>
+                <a class="order" href="#" onclick="order('Spiderman Poster 01 - A5')">
                     Order Now
                 </a>
             </div>
-        </div>
+ </div> 
+             <!-- TRAVEL -->
 
-
-        <!-- TRAVEL — A5 -->
-        <div class="product"
-             data-category="travel"
-             data-size="A5">
-
+        <div class="product" data-category="travel" data-size="A4">
             <div class="poster">
                 <span>TRAVEL<br>MORE.</span>
             </div>
-
             <div class="product-info">
-                <h3>Travel More</h3>
-                <p>Travel • A5</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Travel More - A5')">
+                <h3>Travel Poster 01</h3>
+                <p>Travel • A4</p>
+                <a class="order" href="#" onclick="order('Travel Poster 01 - A4')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- TRAVEL — A4 -->
-        <div class="product"
-             data-category="travel"
-             data-size="A4">
-
+        <div class="product" data-category="travel" data-size="A5">
             <div class="poster">
                 <span>GO<br>EXPLORE.</span>
             </div>
-
             <div class="product-info">
-                <h3>Go Explore</h3>
-                <p>Travel • A4</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Go Explore - A4')">
+                <h3>Travel Poster 02</h3>
+                <p>Travel • A5</p>
+                <a class="order" href="#" onclick="order('Travel Poster 02 - A5')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- TRAVEL — A3 -->
-        <div class="product"
-             data-category="travel"
-             data-size="A3">
-
+        <div class="product" data-category="travel" data-size="A3">
             <div class="poster">
                 <span>WANDER<br>MORE.</span>
             </div>
-
             <div class="product-info">
-                <h3>Wander More</h3>
+                <h3>Travel Poster 03</h3>
                 <p>Travel • A3</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Wander More - A3')">
+                <a class="order" href="#" onclick="order('Travel Poster 03 - A3')">
                     Order Now
                 </a>
             </div>
         </div>
 
 
-        <!-- GYM — A4 -->
-        <div class="product"
-             data-category="gym"
-             data-size="A4">
+        <!-- GYM -->
 
+        <div class="product" data-category="gym" data-size="A4">
             <div class="poster">
                 <span>NO<br>EXCUSES.</span>
             </div>
-
             <div class="product-info">
-                <h3>No Excuses</h3>
+                <h3>Gym Poster 01</h3>
                 <p>Gym • A4</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('No Excuses - A4')">
+                <a class="order" href="#" onclick="order('Gym Poster 01 - A4')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- GYM — A5 -->
-        <div class="product"
-             data-category="gym"
-             data-size="A5">
-
+        <div class="product" data-category="gym" data-size="A5">
             <div class="poster">
                 <span>GET<br>STRONG.</span>
             </div>
-
             <div class="product-info">
-                <h3>Get Strong</h3>
+                <h3>Gym Poster 02</h3>
                 <p>Gym • A5</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Get Strong - A5')">
+                <a class="order" href="#" onclick="order('Gym Poster 02 - A5')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- GYM — A3 -->
-        <div class="product"
-             data-category="gym"
-             data-size="A3">
-
+        <div class="product" data-category="gym" data-size="A3">
             <div class="poster">
                 <span>DISCIPLINE<br>≠ MOTIVATION</span>
             </div>
-
             <div class="product-info">
-                <h3>Discipline</h3>
+                <h3>Gym Poster 03</h3>
                 <p>Gym • A3</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Discipline - A3')">
+                <a class="order" href="#" onclick="order('Gym Poster 03 - A3')">
                     Order Now
                 </a>
             </div>
         </div>
 
 
-        <!-- MOTIVATION — A4 -->
-        <div class="product"
-             data-category="motivation"
-             data-size="A4">
+        <!-- MOTIVATION -->
 
+        <div class="product" data-category="motivation" data-size="A4">
             <div class="poster">
                 <span>KEEP<br>GOING.</span>
             </div>
-
             <div class="product-info">
-                <h3>Keep Going</h3>
+                <h3>Motivation Poster 01</h3>
                 <p>Motivation • A4</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Keep Going - A4')">
+                <a class="order" href="#" onclick="order('Motivation Poster 01 - A4')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- MOTIVATION — A5 -->
-        <div class="product"
-             data-category="motivation"
-             data-size="A5">
-
+        <div class="product" data-category="motivation" data-size="A6">
             <div class="poster">
                 <span>TRUST<br>THE PROCESS.</span>
             </div>
-
             <div class="product-info">
-                <h3>Trust The Process</h3>
-                <p>Motivation • A5</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Trust The Process - A5')">
-                    Order Now
-                </a>
-            </div>
-        </div>
-
-
-        <!-- MOTIVATION — A6 -->
-        <div class="product"
-             data-category="motivation"
-             data-size="A6">
-
-            <div class="poster">
-                <span>START<br>NOW.</span>
-            </div>
-
-            <div class="product-info">
-                <h3>Start Now</h3>
+                <h3>Motivation Poster 02</h3>
                 <p>Motivation • A6</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 02 - A6')">
+                    Order Now
+                </a>
+            </div>
+        </div>
 
-                <a class="order"
-                   href="#"
-                   onclick="order('Start Now - A6')">
+        <div class="product" data-category="motivation" data-size="A5">
+            <div class="poster">
+                <span>ONE DAY<br>OR DAY ONE?</span>
+            </div>
+            <div class="product-info">
+                <h3>Motivation Poster 03</h3>
+                <p>Motivation • A5</p>
+                <a class="order" href="#" onclick="order('Motivation Poster 03 - A5')">
                     Order Now
                 </a>
             </div>
         </div>
 
 
-        <!-- TRAVEL — A6 -->
-        <div class="product"
-             data-category="travel"
-             data-size="A6">
+        <!-- MORE POSTERS -->
 
+        <div class="product" data-category="marvel" data-size="A3">
             <div class="poster">
-                <span>FIND<br>YOUR WAY.</span>
+                <span>MARVEL<br>LEGENDS.</span>
             </div>
-
             <div class="product-info">
-                <h3>Find Your Way</h3>
-                <p>Travel • A6</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Find Your Way - A6')">
+                <h3>Marvel Poster 02</h3>
+                <p>Marvel • A3</p>
+                <a class="order" href="#" onclick="order('Marvel Poster 02 - A3')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- GYM — A6 -->
-        <div class="product"
-             data-category="gym"
-             data-size="A6">
-
+        <div class="product" data-category="dc" data-size="A5">
             <div class="poster">
-                <span>WORK<br>HARD.</span>
+                <span>DC<br>HEROES.</span>
             </div>
-
             <div class="product-info">
-                <h3>Work Hard</h3>
-                <p>Gym • A6</p>
-
-                <a class="order"
-                   href="#"
-                   onclick="order('Work Hard - A6')">
+                <h3>DC Poster 02</h3>
+                <p>DC • A5</p>
+                <a class="order" href="#" onclick="order('DC Poster 02 - A5')">
                     Order Now
                 </a>
             </div>
         </div>
 
-
-        <!-- MOTIVATION — A3 -->
-        <div class="product"
-             data-category="motivation"
-             data-size="A3">
-
+        <div class="product" data-category="ronaldo" data-size="A4">
             <div class="poster">
-                <span>YOU<br>GOT THIS.</span>
+                <span>RISE<br>RONALDO 7.</span>
             </div>
-
             <div class="product-info">
-                <h3>You Got This</h3>
-                <p>Motivation • A3</p>
+                <h3>Ronaldo Poster 02</h3>
+                <p>Ronaldo • A4</p>
+                <a class="order" href="#" onclick="order('Ronaldo Poster 02 - A4')">
+                    Order Now
+                </a>
+            </div>
+        </div>
 
-                <a class="order"
-                   href="#"
-                   onclick="order('You Got This - A3')">
+        <div class="product" data-category="messi" data-size="A6">
+            <div class="poster">
+                <span>MESSI<br>MAGIC.</span>
+            </div>
+            <div class="product-info">
+                <h3>Messi Poster 02</h3>
+                <p>Messi • A6</p>
+                <a class="order" href="#" onclick="order('Messi Poster 02 - A6')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="virat" data-size="A5">
+            <div class="poster">
+                <span>VIRAT<br>18.</span>
+            </div>
+            <div class="product-info">
+                <h3>Virat Kohli Poster 02</h3>
+                <p>Virat Kohli • A5</p>
+                <a class="order" href="#" onclick="order('Virat Kohli Poster 02 - A5')">
+                    Order Now
+                </a>
+            </div>
+        </div>
+
+        <div class="product" data-category="spiderman" data-size="A4">
+            <div class="poster">
+                <span>SPIDER<br>VERSE.</span>
+            </div>
+            <div class="product-info">
+                <h3>Spiderman Poster 02</h3>
+                <p>Spiderman • A4</p>
+                <a class="order" href="#" onclick="order('Spiderman Poster 02 - A4')">
                     Order Now
                 </a>
             </div>
@@ -854,14 +702,16 @@ footer {
 
 <section id="about" class="about">
 
-    <h2 class="section-title">More than a poster.</h2>
+    <h2 class="section-title">
+        More than a poster.
+    </h2>
 
     <p>
         Your room is your space.
         Your walls should say something about you.
-        We curate aesthetic sports, travel, fitness,
-        superhero and motivational posters to help
-        you create a space that feels like yours.
+        We curate aesthetic travel, fitness, sports,
+        superhero and motivational posters to help you
+        create a space that feels like yours.
     </p>
 
 </section>
@@ -880,77 +730,59 @@ let selectedCategory = "all";
 let selectedSize = "all";
 
 
-const categoryButtons =
-    document.querySelectorAll('[data-filter-type="category"]');
+function filterCategory(category, button) {
 
-const sizeButtons =
-    document.querySelectorAll('[data-filter-type="size"]');
+    selectedCategory = category;
+
+    document.querySelectorAll(
+        '.filters:first-of-type .filter'
+    ).forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    applyFilters();
+}
 
 
-categoryButtons.forEach(button => {
+function filterSize(size, button) {
 
-    button.addEventListener("click", function() {
+    selectedSize = size;
 
-        selectedCategory =
-            this.getAttribute("data-filter-value");
+    const sizeButtons =
+        document.querySelectorAll('.filter');
 
-        categoryButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
+    sizeButtons.forEach(btn => {
 
-        this.classList.add("active");
-
-        updateProducts();
+        if (
+            btn.innerText.trim() === "All Sizes" ||
+            ["A3", "A4", "A5", "A6"].includes(btn.innerText.trim())
+        ) {
+            btn.classList.remove('active');
+        }
 
     });
 
-});
+    button.classList.add('active');
+
+    applyFilters();
+}
 
 
-sizeButtons.forEach(button => {
+function applyFilters() {
 
-    button.addEventListener("click", function() {
+    document.querySelectorAll('.product').forEach(product => {
 
-        selectedSize =
-            this.getAttribute("data-filter-value");
-
-        sizeButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-        this.classList.add("active");
-
-        updateProducts();
-
-    });
-
-});
-
-
-function updateProducts() {
-
-    const products =
-        document.querySelectorAll(".product");
-
-    products.forEach(product => {
-
-        const productCategory =
-            product.getAttribute("data-category");
-
-        const productSize =
-            product.getAttribute("data-size");
-
-
-        const categoryMatches =
+        const categoryMatch =
             selectedCategory === "all" ||
-            productCategory === selectedCategory;
+            product.dataset.category === selectedCategory;
 
-        const sizeMatches =
+        const sizeMatch =
             selectedSize === "all" ||
-            productSize === selectedSize;
+            product.dataset.size === selectedSize;
 
-
-        if (categoryMatches && sizeMatches) {
+        if (categoryMatch && sizeMatch) {
 
             product.style.display = "block";
 
@@ -961,7 +793,6 @@ function updateProducts() {
         }
 
     });
-
 }
 
 
@@ -987,5 +818,5 @@ function order(productName) {
 </script>
 
 </body>
-                    </html>
+</html>
        
